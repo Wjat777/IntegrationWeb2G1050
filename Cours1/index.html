@@ -21,26 +21,26 @@ https://codepen.io/javascriptacademy-stash/pen/oNeNMNR
   </head>
   <body>
     <div class="container">
-      <form id="form" action="/">
+      <form id="form" action="/" novalidate>
         <h1>Rejoinez-nous</h1>
         <div class="input-control">
           <label for="username">Nom d'utiliseur</label>
-          <input id="username" name="username" type="text" />
+          <input id="username" name="username" type="text"  required />
           <div class="errorMessage"></div>
         </div>
         <div class="input-control">
           <label for="email">Adresse courriel</label>
-          <input id="email" name="email" type="text" />
+          <input id="email" name="email" type="text" required/>
           <div class="errorMessage"></div>
         </div>
         <div class="input-control">
           <label for="password">Mot de passe</label>
-          <input id="password" name="password" type="password" />
+          <input id="password" name="password" type="password" required/>
           <div class="errorMessage"></div>
         </div>
         <div class="input-control">
           <label for="password2">Confirmation mot de passe</label>
-          <input id="password2" name="password2" type="password" />
+          <input id="password2" name="password2" type="password" required />
           <div class="errorMessage"></div>
         </div>
         <button type="submit">Joindre</button>
