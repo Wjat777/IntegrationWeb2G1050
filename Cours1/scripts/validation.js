@@ -3,6 +3,7 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
+var noError;
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
@@ -31,8 +32,8 @@ const isValidEmail = (email) => {
 };
 
 const validateInputs = () => {
-  let noError=true;
-
+  
+  noError=true;
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
