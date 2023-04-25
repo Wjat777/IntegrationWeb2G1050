@@ -4,12 +4,6 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  validateInputs();
-});
-
 const setError = (element, message) => {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".errorMessage");
@@ -17,6 +11,7 @@ const setError = (element, message) => {
   errorDisplay.innerText = message;
   inputControl.classList.add("error");
   inputControl.classList.remove("success");
+  noError=false;
 };
 
 const setSuccess = (element) => {
@@ -26,6 +21,7 @@ const setSuccess = (element) => {
   errorDisplay.innerText = "";
   inputControl.classList.add("success");
   inputControl.classList.remove("error");
+  
 };
 
 const isValidEmail = (email) => {
@@ -35,6 +31,8 @@ const isValidEmail = (email) => {
 };
 
 const validateInputs = () => {
+  let noError=true;
+
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
@@ -69,4 +67,5 @@ const validateInputs = () => {
   } else {
     setSuccess(password2);
   }
+  return noError;
 };

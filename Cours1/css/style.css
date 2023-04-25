@@ -3,6 +3,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h2{
+  color: #f0f0f0;
+  text-align: center;
+}
 #form {
   width: 300px;
   margin: 20vh auto 0 auto;
